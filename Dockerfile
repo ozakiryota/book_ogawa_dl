@@ -33,5 +33,13 @@ RUN pip3 install jupyter && \
 		>> /home/jupyter_notebook.sh &&\
 	chmod +x /home/jupyter_notebook.sh
 ########## Requirements ##########
+RUN apt-get update && \
+	apt-get install -y \
+		libopencv-dev && \
+	pip3 install \
+		matplotlib \
+		tqdm \
+		opencv-python \
+		pandas
 ######### initial position ##########
 WORKDIR /home
