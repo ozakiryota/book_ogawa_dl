@@ -1,5 +1,5 @@
-# FROM nvidia/cuda:8.0-cudnn7-devel-ubuntu16.04
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:8.0-cudnn7-devel-ubuntu16.04
+# FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 ########## nvidia-docker1 hooks ##########
 LABEL com.nvidia.volumes.needed="nvidia_driver"
@@ -18,10 +18,10 @@ RUN apt-get update && \
 		python3-pip && \
 	pip3 install --upgrade pip && \
 	pip3 install \
-		# torch==1.0.0 \
-		# torchvision==0.2.1 \
-		torch==1.1.0 \
-		torchvision==0.3.0
+		torch==1.0.0 \
+		torchvision==0.2.1
+		# torch==1.1.0 \
+		# torchvision==0.3.0
 ########## Book "pytorch_advanced" ##########
 RUN cd /home && \
 	git clone https://github.com/YutaroOgawa/pytorch_advanced
