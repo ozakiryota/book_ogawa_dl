@@ -3,7 +3,7 @@
 if [ $# -ne 0 ]; then
 	comment="$*"
 else
-	comment="updated"
+	comment="Update"
 fi
 
 git add .

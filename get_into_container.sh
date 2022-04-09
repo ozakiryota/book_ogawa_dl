@@ -10,5 +10,4 @@ docker run -it --rm \
 	-v "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 	--gpus all \
 	-p 8000:8000 \
-	$image:$tag \
-	bash -c "/root/pytorch_advanced/jupyter_notebook.sh"
+	$image:$tag
