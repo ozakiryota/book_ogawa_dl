@@ -37,5 +37,8 @@ RUN apt-get update && \
 		tqdm \
 		opencv-python \
 		pandas
+########## Dataset and weights ##########
+RUN mkdir -p ~/pytorch_advanced/3_semantic_segmentation/weights && \
+	wget "https://drive.google.com/u/0/uc?id=12eN6SpnawYuQmD1k9VgVW3QSgPR6hICc&amp;export=download&amp;confirm=t&confirm=t" -O ~/pytorch_advanced/3_semantic_segmentation/weights/pspnet50_ADE20K.pth
 ########## Initial position ##########
 WORKDIR /root/pytorch_advanced
